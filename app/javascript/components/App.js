@@ -1,29 +1,26 @@
-import React, { Component } from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import React, { Component } from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/Home'
 
 
-class App extends React.Component {
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
+
+class App extends Component {
   render() {
-    const {
-      logged_in,
-      current_user,
-      new_user_route,
-      sign_in_route,
-      sign_out_route
-    } = this.props
     return (
-      <React.Fragment>
-        { logged_in &&
-          <div>
-            <a href={sign_out_route }>Sign Out</a>
-          </div>
-        }
-        { !logged_in &&
-          <div>
-            <a href={ sign_in_route }>Sign In</a>
-          </div>
-        }
-      </React.Fragment>
+
+      <Router>
+        <Header {...this.props} />
+        <Routes>
+          <Route exact path="/" element= {<Home />} />
+        </Routes>
+        <Footer />
+      </Router>
     )
   }
 }
