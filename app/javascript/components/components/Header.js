@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import apts from '../assets/apts.jpg'
+import { Nav } from 'reactstrap'
+import apts from '../assets/apts.gif'
+
 
 
 class Header extends Component {
@@ -22,10 +24,16 @@ class Header extends Component {
           {! logged_in &&
           <>
           <ul>
-            <a href={new_user_route}>Sign Up</a>
+            <a href="http://localhost:3000/apartmentindex"><div className="link-text">View Apartments</div></a>
           </ul>
           <ul>
-            <a href={sign_in_route}>Sign In</a>
+            <a href={new_user_route}><div className="link-text">Sign Up</div></a>     
+          </ul>
+          <ul>
+            <a href={sign_in_route}><div className="link-text">Sign In</div></a>
+          </ul>
+          <ul>
+            <a href={sign_out_route}><div className="link-text">Sign Out</div></a>
           </ul>
           </>
     }
