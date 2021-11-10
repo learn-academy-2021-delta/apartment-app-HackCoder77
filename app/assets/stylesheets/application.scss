@@ -1,10 +1,16 @@
- @import 'bootstrap';
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Zen+Antique&display=swap');
+
 
  /* ---HEADER--- */
+
 header {
-    background-color: #0753f7;
+    font-family: 'Open Sans Condensed', sans-serif;   
+    background: url(https://www.desktopbackground.org/p/2014/11/23/860448_city-apartment-mystery-wallpapers_1920x1080_h.jpg);
     display: flex;
     justify-content: space-between;
+    font-size: 20px;
   }
   .apts {
     width: 336px;
@@ -15,25 +21,55 @@ header {
     flex-direction: row;
     align-items: flex-end;
     padding-right: 50px;
+    
   }
-
   .body {
       display: center;
       float: left;
       align-items: center;
       position: fixed;
+      font-family: 'Open Sans Condensed', sans-serif;   
+      font-size: 25px;
   }
+  
+  .link-text {
+    color: rgb(0, 217, 255);
+    font-size: 20px;
+  }
+
+/*----INDEX------*/
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+.card {
+  text-align: left;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 30px;
+}
+.fa-icon {
+  font-size: 55px;
+  padding-right: 10px;
+}
+
+.clear {
+  clear: both
+}
 
 /* ---FOOTER--- */
 footer {
-    font-size: 200px;
+    font-size: 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: #0753f7;;
-    display: flex;
+    display:inline-block;
     justify-content: space-around;
+    background: url(https://img.nh-hotels.net/nh_collection_dresden_altmarkt-198-apartment.jpg?output-quality=80&resize=1110:*&composite-to=center,center|1110:380&background-color=white);
   }
 
+
+  
 
   
